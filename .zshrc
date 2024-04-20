@@ -33,6 +33,15 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
+# list all after cd
+function list_all() {
+  emulate -L zsh
+  ls
+}
+if [[ ${chpwd_functions[(r)list_all]} != "list_all" ]];then
+  chpwd_functions=(${chpwd_functions[@]} "list_all")
+fi
+
 # Plugins
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
