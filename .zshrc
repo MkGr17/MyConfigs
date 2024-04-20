@@ -20,6 +20,10 @@ alias lt="l --tree"
 alias wtf='echo "🤦"'
 alias history='history 1 -1'
 
+# Workaround echo bug
+alias pyea="pyenv activate atlas && source ~/.zshrc"
+alias pyev="pyenv activate voebs && source ~/.zshrc"
+
 # Man coloring
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
