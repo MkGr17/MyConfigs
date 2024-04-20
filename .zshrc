@@ -21,8 +21,8 @@ alias wtf='echo "🤦"'
 alias history='history 1 -1'
 
 # Workaround echo bug
-alias pyea="pyenv activate atlas && source ~/.zshrc"
-alias pyev="pyenv activate voebs && source ~/.zshrc"
+alias pyatlas="pyenv activate atlas && source ~/.zshrc"
+alias pyvoebs="pyenv activate voebs && source ~/.zshrc"
 
 # Man coloring
 export LESS_TERMCAP_mb=$'\e[1;32m'
