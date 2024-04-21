@@ -36,7 +36,7 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 # list all after cd
 function list_all() {
   emulate -L zsh
-  ls
+  ls -la
 }
 if [[ ${chpwd_functions[(r)list_all]} != "list_all" ]];then
   chpwd_functions=(${chpwd_functions[@]} "list_all")
