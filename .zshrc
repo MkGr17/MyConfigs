@@ -11,6 +11,17 @@ tput setaf 5; echo "Talk is cheap. Show me the code."; \
 eval "$(pyenv init -)"
 eval "$(starship init zsh)"
 
+# Open directories with lf and cd in it
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+
 # Aliases
 alias l="lsd"
 alias ls="lsd -l"
@@ -19,8 +30,11 @@ alias lsa="lsd -la"
 alias lt="l --tree"
 alias wtf='echo "🤦"'
 alias history='history 1 -1'
+alias lo="lfcd"
 
-# Workaround echo bug
+# Python
+
+alias pydeact="pyenv deactivate && source ~/.zshrc"
 alias pyatlas="pyenv activate atlas && source ~/.zshrc"
 alias pyvoebs="pyenv activate voebs && source ~/.zshrc"
 
@@ -45,3 +59,6 @@ fi
 # Plugins
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# nerd fonts for lf
+source ~/.config/lf/icons.zsh
