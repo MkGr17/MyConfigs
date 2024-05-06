@@ -3,6 +3,10 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+# Locale
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # Greeting
 tput setaf 5; echo "Talk is cheap. Show me the code."; \
 	tput setaf 4; echo "      - Linus Torvalds -\n"
