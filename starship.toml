@@ -16,10 +16,9 @@ $kotlin\
 $haskell\
 $python\
 [](fg:teal bg:blue)\
-$docker_context\
-[](fg:blue bg:purple)\
+[](fg:blue bg:red)\
 $time\
-[ ](fg:purple)\
+[ ](fg:red)\
 $line_break$character"""
 
 palette = 'catppuccin_mocha'
@@ -151,16 +150,11 @@ symbol = ""
 style = "bg:teal"
 format = '[[ $symbol ($version \($virtualenv\))](fg:base bg:teal)]($style)' 
 
-[docker_context]
-symbol = ""
-style = "bg:mantle"
-format = '[[ $symbol( $context) ](fg:base bg:blue)]($style)'
-
 [time]
 disabled = false
 time_format = "%R"
 style = "bg:peach"
-format = '[[  $time ](fg:mantle bg:purple)]($style)'
+format = '[[  $time ](fg:mantle bg:red)]($style)'
 
 [line_break]
 disabled = false
