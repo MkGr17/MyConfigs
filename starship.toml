@@ -1,3 +1,6 @@
+# Set the global command timeout to 10 seconds (10000 milliseconds)
+command_timeout = 10000
+
 format = """
 [](surface0)\
 $os\

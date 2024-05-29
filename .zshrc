@@ -1,15 +1,20 @@
+# Cow gifs as greeting
+# /Users/mgroe/Developer/PrivatProjects/cowsay-files/.cowrc
+
 # History
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
-# Locale
+# Exports
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export GDAL_LIBRARY_PATH='/opt/homebrew/opt/gdal/lib/libgdal.dylib'
+export GEOS_LIBRARY_PATH='/opt/homebrew/opt/geos/lib/libgeos_c.dylib'
 
 # Greeting
-tput setaf 5; echo "Talk is cheap. Show me the code."; \
-	tput setaf 4; echo "      - Linus Torvalds -\n"
+# tput setaf 5; echo "Talk is cheap. Show me the code."; \
+#	tput setaf 4; echo "      - Linus Torvalds -\n"
 
 # Eval
 eval "$(pyenv init -)"
